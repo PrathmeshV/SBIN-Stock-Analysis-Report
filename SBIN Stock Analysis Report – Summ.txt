@@ -1,0 +1,54 @@
+# SBIN Stock Analysis Report – Summary
+
+This notebook presents a comprehensive analysis of the historical stock data of State Bank of India (SBIN) using PySpark on Databricks. The workflow focuses on data cleaning, feature engineering, trend detection, and forecasting, aiming to derive actionable insights from SBIN’s price movements.
+
+---
+
+## **Summary**
+
+### **Objectives**
+- Clean and preprocess SBIN’s historical stock data for accurate analysis.
+- Engineer key financial indicators (daily returns, moving averages).
+- Detect market signals (Golden Cross, Death Cross).
+- Analyze seasonal trends and outliers in returns.
+- Forecast future prices using ARIMA time series modeling.
+
+### **Tools Used**
+- **PySpark**: For scalable data processing.
+- **Databricks**: For flexible data analysis environment.
+
+### **Dataset**
+- **Source**: SBIN’s historical stock data in CSV format.
+- **Columns**: Date, Open, High, Low, Close, Adj Close, Volume.
+- **Preprocessing**: Removal of irrelevant headers, handling nulls, converting columns to appropriate data types.
+
+---
+
+## **Analysis Steps**
+
+### 1. **Data Cleaning**
+   - **Step 1**: Load raw CSV with all columns as strings.
+   - **Step 2**: Remove invalid header rows.
+   - **Step 3**: (If present) Rename columns for clarity (e.g., Price to DateString).
+   - **Step 4**: Convert date columns to proper datetime format.
+   - **Step 5**: Cast numeric columns (Adj Close, Close, High, Low, Open, Volume) to appropriate types.
+
+### 2. **Feature Engineering**
+   - Compute daily returns and moving averages.
+   - Prepare engineered features for further analysis.
+
+### 3. **Trend & Signal Detection**
+   - Detect significant signals like Golden Cross and Death Cross.
+   - Identify market trends.
+
+### 4. **Seasonality & Outlier Analysis**
+   - Analyze seasonal patterns and detect outliers in returns.
+
+### 5. **Time Series Forecasting**
+   - Apply ARIMA modeling to forecast SBIN’s future stock prices.
+
+---
+
+## **Conclusion**
+
+This notebook demonstrates a robust approach to stock data analysis using PySpark, guiding users from raw data ingestion to advanced forecasting. The workflow is modular, making it easy to adapt for other stock datasets or extend with additional analytics.
